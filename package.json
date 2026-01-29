@@ -11,7 +11,7 @@
         "lint": "biome lint .",
         "format": "biome check --write .",
         "check": "biome ci",
-        "prepare": "husky",
+        "prepare": "node -e \"process.env.CI || require('husky').install()\"",
         "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
         "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
         "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
